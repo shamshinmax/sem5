@@ -2,8 +2,13 @@ import functions
 import view
 import data
 def button():
-    value1 = view.get()
-    value2 = view.get()
+    chos = int(input("Complex or not(0, 1)"))
+    if chos == 0:
+        value1 = view.get_int()
+        value2 = view.get_int()
+    elif chos == 1:
+        value1 = view.get_complex()
+        value2 = view.get_complex()
     data.user_data(value1, value2)
     fun = input("Choose operation(+-/*): " )
     if fun == "+":
